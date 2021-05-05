@@ -3,9 +3,9 @@ const crypto = require('crypto');
 
 module.exports = {
     async index (request, response) {
-        const restaurant = await connection('restaurant').select('*');
+        const user = await connection('users').select('*');
     
-        return response.json(restaurant);
+        return response.json(user);
     },
 
     async create(request, response){
@@ -13,7 +13,7 @@ module.exports = {
 
         const id = crypto.randomBytes(3).toString('HEX');
 
-        await connection('restaurant').insert({ id, name, email, city, uf })
+        await connection('users').insert({ id, name, email, city, uf })
 
         return response.json({ id });
     }

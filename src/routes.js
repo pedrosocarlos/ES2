@@ -1,7 +1,7 @@
 const express = require('express');
 
 const userController = require('./controllers/userController');
-const restaurantController = require('./controllers/userController');
+const restaurantController = require('./controllers/restaurantController');
 const menuController = require('./controllers/menuController');
 const profileUserController = require('./controllers/profileUserController');
 const profileRestController = require('./controllers/profileRestController');
